@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/ALGiSP_OOP.iml" filepath="$PROJECT_DIR$/.idea/ALGiSP_OOP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/QUEUE_STACK/QUEUE_STACK.iml" filepath="$PROJECT_DIR$/QUEUE_STACK/QUEUE_STACK.iml" />
+    </modules>
+  </component>
+</project>
