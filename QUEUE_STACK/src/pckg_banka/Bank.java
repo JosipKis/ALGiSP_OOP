@@ -32,10 +32,36 @@ public class Bank {
         queue.enqueue(customer);
     }
 
-    public void startTransactionsOnBankStand(){
-
+    public void startTransactionsOnBankStand(BankStands no1, BankStands no2, BankStands no3){
+        float timer = 0;
+        if (queue.isEmpty()){
+            System.out.println("There is no one waiting - the queue is empty!");
+        }else {
+            while (!queue.isEmpty()){
+                float processingTime2 = no2.getProcessingTime();
+                float processingTime3 = no3.getProcessingTime();
+                if ((processingTime2 % 2) == 0){
+                    no2.changeBankStandStatus(true);
+                }
+                if ((processingTime3 % 3) == 0){
+                    no3.changeBankStandStatus(true);
+                }
+                System.out.println("Banker at stand no.1 processed a person.");
+                queue.dequeue();
+                if (no2.isStatusProcessing()){
+                    System.out.println("Banker at stand no.2 processed a person.");
+                    queue.dequeue();
+                    no2.changeBankStandStatus(false);
+                }
+                if (no3.isStatusProcessing()){
+                    System.out.println("Banker at stand no.3 processed a person.");
+                    queue.dequeue();
+                    no3.changeBankStandStatus(false);
+                }
+                timer++;
+                no2.setProcessingTime(timer);
+                no3.setProcessingTime(timer);
+            }
+        }
     }
-
-
-
 }

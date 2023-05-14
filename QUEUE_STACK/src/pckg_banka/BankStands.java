@@ -16,4 +16,26 @@ public class BankStands {
     public void changeBankStandStatus(boolean newStatus){
         this.statusProcessing = newStatus;
     }
+
+    @Override
+    public String toString() {
+        return "BankStands{" +
+                "id=" + id +
+                ", processingTime=" + processingTime +
+                ", statusProcessing=" + statusProcessing +
+                '}';
+    }
+
+    public float getProcessingTime() {
+        return processingTime;
+    }
+
+    public void setProcessingTime(float processingTime) {
+        this.processingTime = processingTime;
+    }
+
+    public boolean isStatusProcessing() {
+        return statusProcessing;
+    }
+
 }
