@@ -7,9 +7,6 @@ public class Main {
         BankStands no1 = new BankStands(0);
         BankStands no2 = new BankStands(0);
         BankStands no3  =new BankStands(0);
-        System.out.println(no1.toString());
-        System.out.println(no2.toString());
-        System.out.println(no3.toString());
         Customer customer1 = new Customer("Josip");
         int n = 0;
         while (n < 30){
