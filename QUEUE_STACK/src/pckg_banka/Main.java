@@ -7,10 +7,10 @@ public class Main {
         BankStands no1 = new BankStands(0);
         BankStands no2 = new BankStands(0);
         BankStands no3  =new BankStands(0);
-        Customer customer1 = new Customer("Josip");
         int n = 0;
         while (n < 30){
-            bank.addCustomerToQueue(customer1);
+            Customer customer = new Customer(Customer.generateName());
+            bank.addCustomerToQueue(customer);
             n++;
         }
         bank.startTransactionsOnBankStand(no1, no2, no3);
